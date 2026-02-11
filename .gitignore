@@ -39,4 +39,10 @@ godot-cpp/
 
 .DS_Store
 compile_commands.json
-bin/
+bin/**/*.dylib
+bin/**/*.dll
+bin/**/*.so
+
+project/bin/**/*.dylib
+project/bin/**/*.dll
+project/bin/**/*.so
