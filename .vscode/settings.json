@@ -1,6 +1,8 @@
 {
   "godotTools.editorPath.godot4": "/Applications/Godot.app",
+  "godot.debug_path": "/Applications/Godot_DEBUG.app",
   "files.exclude": {
-    "src/*.os": true,
+    "src/**/*.os": true,
+    "project/assets/**/*.import": true,
   }
 }

@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "scons-build",
+      "type": "shell",
+      "command": "scons",
+      "args": ["target=template_debug", "compiledb=yes", "debug_symbols=yes"]
+    },
+    {
+      "label": "resign",
+      "type": "shell",
+      "command": "bash",
+      "args": ["${workspaceFolder}/scripts/resign.sh"],
+      "options": {
+        "env": {
+          "GODOT_PATH": "${config:godot.debug_path}"
+        }
+      }
+    },
+    {
+      "label": "prepare-godot",
+      "dependsOn": ["scons-build", "resign"]
+    }
+  ]
+}
